@@ -92,7 +92,9 @@ Kiến trúc này giúp:
 Phân tách trách nhiệm rõ ràng
 Dễ kiểm thử
 Dễ mở rộng hệ thống
+
 5. Cấu trúc thư mục dự án (kèm chú thích chức năng)
+
 edu-group-assignment-system
 │
 ├── src/main/java/com/project
@@ -180,6 +182,7 @@ edu-group-assignment-system
 │   application.yml
 │
 └── README.md
+
 6. Hướng dẫn chạy dự án
 Bước 1: Clone repository
 git clone <repository-url>
