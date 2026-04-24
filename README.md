@@ -226,7 +226,7 @@ MySQL
 Tích hợp:
 
 GitHub API
-Gemini AI (Google)
+AI Agent
 
 Công cụ:
 
