@@ -23,7 +23,9 @@ Tích hợp AI để hỗ trợ chấm điểm và review code.
 Áp dụng các nguyên tắc thiết kế phần mềm SOLID.
 Áp dụng Design Pattern (Strategy, Factory, Repository).
 Tổ chức code theo hướng dễ bảo trì và dễ mở rộng.
+
 3. Chức năng chính của hệ thống
+
 3.1 Chức năng dành cho học sinh
 Đăng ký tài khoản
 Đăng nhập / đăng xuất
@@ -33,6 +35,7 @@ Xem chi tiết bài tập
 Nộp bài (upload source code)
 Xem kết quả chấm điểm
 Xem nhận xét từ AI
+
 3.2 Chức năng dành cho giáo viên
 Tạo bài tập
 Quản lý lớp học
@@ -41,6 +44,7 @@ Theo dõi tiến độ làm bài
 Chấm điểm thủ công
 Xem kết quả chấm từ AI
 Xem lịch sử nộp bài
+
 3.3 Quản lý bài tập (Assignment)
 
 Thông tin mỗi bài tập bao gồm:
@@ -51,16 +55,19 @@ Hạn nộp
 Repository GitHub
 Tiêu chí chấm điểm
 Danh sách nhóm tham gia
+
 3.4 Quản lý nộp bài (Submission)
 Nộp bài thông qua hệ thống
 Push code lên GitHub
 Lưu lịch sử nộp bài
 Tự động trigger AI review
 Lưu kết quả chấm điểm
+
 3.5 Chức năng bổ sung
 Tích hợp AI (Gemini) để review code
 Hệ thống chấm điểm đa chiến lược (Strategy Pattern)
 Theo dõi commit từ GitHub
+
 3.6 Trang quản trị
 Quản lý người dùng
 Quản lý lớp học
