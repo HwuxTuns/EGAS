@@ -150,10 +150,70 @@ Client → Controller → Service → Repository → Database
 ---
 
 ## 5. Cấu trúc thư mục dự án
-
-<pre> ```bash edu_group_assignment_system │ ├── controller │ ├── assignment │ │ └── AssignmentController.java │ ├── submission │ │ └── SubmissionController.java │ └── user │ └── UserController.java │ ├── service │ ├── assignment │ │ ├── AssignmentService.java │ │ └── AssignmentServiceImpl.java │ │ │ ├── submission │ │ ├── SubmissionService.java │ │ └── SubmissionServiceImpl.java │ │ │ ├── ai │ │ ├── AIService.java │ │ └── impl │ │ ├── GeminiAIService.java │ │ └── OpenAIService.java │ │ │ ├── github │ │ ├── GithubService.java │ │ └── GithubServiceImpl.java │ │ │ ├── strategy │ │ ├── GradingStrategy.java │ │ └── impl │ │ ├── AIGradingStrategy.java │ │ ├── TeacherGradingStrategy.java │ │ └── CommitGradingStrategy.java │ │ │ └── factory │ ├── GradingStrategyFactory.java │ └── AIServiceFactory.java │ ├── repository │ ├── AssignmentRepository.java │ ├── SubmissionRepository.java │ └── UserRepository.java │ ├── entity │ ├── User.java │ ├── Classroom.java │ ├── Group.java │ ├── Assignment.java │ └── Submission.java │ ├── dto │ ├── assignment │ ├── submission │ └── user │ ├── config │ ├── SecurityConfig.java │ └── GithubConfig.java │ └── EduApplication.java ``` </pre>
-
----
+'''bash edu_group_assignment_system
+│
+├── controller
+│   ├── assignment
+│   │   AssignmentController.java
+│   │
+│   ├── submission
+│   │   SubmissionController.java
+│   │
+│   └── user
+│       UserController.java
+│
+├── service
+│   ├── assignment
+│   │   AssignmentService.java
+│   │   AssignmentServiceImpl.java
+│   │
+│   ├── submission
+│   │   SubmissionService.java
+│   │   SubmissionServiceImpl.java
+│   │
+│   ├── ai
+│   │   AIService.java
+│   │   impl/
+│   │       GeminiService.java
+│   │       OpenAIService.java
+│   │
+│   ├── github
+│   │   GithubService.java
+│   │   GithubServiceImpl.java
+│
+│   ├── strategy
+│   │   GradingStrategy.java
+│   │   impl/
+│   │       AIGradingStrategy.java
+│   │       TeacherGradingStrategy.java
+│   │       CommitGradingStrategy.java
+│
+│   ├── factory
+│   │   GradingStrategyFactory.java
+│   │   AIServiceFactory.java
+│
+├── repository
+│   AssignmentRepository.java
+│   SubmissionRepository.java
+│   UserRepository.java
+│
+├── entity
+│   User.java
+│   Classroom.java
+│   Group.java
+│   Assignment.java
+│   Submission.java
+│
+├── dto
+│   assignment/
+│   submission/
+│   user/
+│
+├── config
+│   SecurityConfig.java
+│   GithubConfig.java
+│
+└── EduApplication.java '''
 
 ## 6. Hướng dẫn chạy dự án
 
