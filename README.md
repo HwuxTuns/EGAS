@@ -150,7 +150,8 @@ Client → Controller → Service → Repository → Database
 ---
 
 ## 5. Cấu trúc thư mục dự án
-'''bash edu_group_assignment_system
+```plaintext
+edu_group_assignment_system
 │
 ├── controller
 │   ├── assignment
@@ -213,7 +214,8 @@ Client → Controller → Service → Repository → Database
 │   SecurityConfig.java
 │   GithubConfig.java
 │
-└── EduApplication.java '''
+└── EduApplication.java
+```
 
 ## 6. Hướng dẫn chạy dự án
 
