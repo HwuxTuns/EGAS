@@ -1,21 +1,23 @@
-Hệ thống Website Quản lý Bài tập Nhóm Tin học (THPT)
-1. Giới thiệu dự án
+# Hệ thống Website Quản lý Bài tập Nhóm Tin học (THPT)
 
-Đây là dự án xây dựng hệ thống Website quản lý bài tập nhóm môn Tin học dành cho học sinh THPT. Hệ thống hỗ trợ giáo viên giao bài tập, học sinh làm việc theo nhóm và nộp bài trực tuyến thông qua tích hợp với GitHub.
+---
 
-Ngoài ra, hệ thống còn tích hợp AI (Gemini) để tự động review code, hỗ trợ đánh giá chất lượng bài làm ngay sau khi học sinh nộp bài.
+## 1. Giới thiệu dự án
 
-Dự án được xây dựng theo kiến trúc Backend tập trung với:
+Đây là dự án xây dựng hệ thống Website quản lý bài tập nhóm môn Tin học dành cho học sinh THPT. 
+Hệ thống hỗ trợ giáo viên giao bài tập, học sinh làm việc theo nhóm và nộp bài trực tuyến thông qua tích hợp với GitHub.
 
-Backend: xây dựng bằng Spring Boot (Java), sử dụng MySQL làm cơ sở dữ liệu.
-Hệ thống tích hợp API bên ngoài: GitHub API và Gemini AI.
+Ngoài ra, hệ thống tích hợp AI nhằm hỗ trợ quá trình học tập và đánh giá, đóng vai trò như một **trợ lý thông minh** cho cả giáo viên và học sinh.
 
-Kiến trúc backend được thiết kế theo mô hình Layered Architecture kết hợp với các nguyên tắc SOLID và các Design Pattern nhằm đảm bảo hệ thống dễ bảo trì, dễ mở rộng và rõ ràng trong việc phân tách trách nhiệm.
+Dự án được xây dựng bằng:
 
-2. Mục tiêu của dự án
+* Backend: Java Spring Boot
+* Database: MySQL (chạy bằng Docker)
+* Tích hợp: GitHub API và AI APIs (có khả năng mở rộng)
 
-Mục tiêu của dự án:
+---
 
+<<<<<<< HEAD
 Xây dựng hệ thống quản lý bài tập nhóm cho học sinh THPT.
 Tích hợp Git để quản lý source code bài nộp.
 Tích hợp AI để hỗ trợ chấm điểm và review code.
@@ -75,179 +77,288 @@ Quản lý bài tập
 Quản lý bài nộp
 Theo dõi hệ thống
 4. Kiến trúc hệ thống
+=======
+## 2. Mục tiêu của dự án
 
-Backend được xây dựng theo mô hình Layered Architecture gồm các tầng:
+* Xây dựng hệ thống quản lý bài tập nhóm cho học sinh THPT
+* Tích hợp Git để quản lý source code bài nộp
+* Tích hợp AI hỗ trợ học tập và đánh giá
+* Áp dụng Layered Architecture và SOLID
+* Áp dụng Design Pattern (Strategy, Factory, Repository)
+* Thiết kế hệ thống dễ mở rộng (AI, Git providers)
 
-Controller: Nhận request từ client và trả response.
-Service: Xử lý logic nghiệp vụ.
-Repository: Tương tác với cơ sở dữ liệu (MySQL).
-DTO: Truyền dữ liệu giữa các tầng.
-Entity: Định nghĩa cấu trúc bảng database.
+---
 
-Luồng xử lý cơ bản:
+## 3. Chức năng chính của hệ thống
 
+### 3.1 Chức năng dành cho học sinh
+
+* Đăng ký tài khoản
+* Đăng nhập / đăng xuất
+* Xem danh sách bài tập
+* Tham gia nhóm
+* Xem chi tiết bài tập
+* Nộp bài (upload source code)
+* Xem điểm và nhận xét
+* Chat với AI để được gợi ý làm bài
+
+---
+
+### 3.2 Chức năng dành cho giáo viên
+
+* Tạo bài tập
+* Quản lý lớp học
+* Quản lý nhóm học sinh
+* Theo dõi tiến độ làm bài
+* Chấm điểm thủ công
+* Xem gợi ý chấm điểm từ AI
+* Xem lịch sử nộp bài
+
+---
+
+### 3.3 Quản lý bài tập (Assignment)
+
+Thông tin mỗi bài tập bao gồm:
+
+* Tiêu đề bài tập
+* Mô tả
+* Hạn nộp
+* Repository GitHub
+* Tiêu chí chấm điểm
+* Danh sách nhóm tham gia
+>>>>>>> 4ca21048b06b9777f1e4629d211a4fd157ea86e4
+
+---
+
+### 3.4 Quản lý bài nộp (Submission)
+
+* Nộp bài thông qua hệ thống
+* Push code lên GitHub
+* Lưu lịch sử nộp bài
+* Tự động trigger AI phân tích
+* Lưu kết quả gợi ý
+
+---
+
+### 3.5 Tích hợp AI (Điểm nổi bật)
+
+Hệ thống được thiết kế theo hướng **mở rộng AI**, không phụ thuộc vào một nền tảng duy nhất.
+
+#### Có thể tích hợp:
+
+* Gemini (Google)
+* OpenAI (GPT)
+* Các AI khác trong tương lai
+
+#### Kiến trúc:
+
+* Sử dụng **Strategy Pattern** để lựa chọn AI
+* Sử dụng **Factory Pattern** để khởi tạo AI Service
+* Dễ dàng thay thế hoặc thêm AI mới mà không ảnh hưởng hệ thống
+
+---
+
+### 🎯 Vai trò của AI
+
+#### Đối với giáo viên:
+
+* Gợi ý điểm số (AI grading suggestion)
+* Gợi ý nhận xét bài làm
+* Phân tích chất lượng code (clean code, logic, cấu trúc)
+
+#### Đối với học sinh:
+
+* Chat trực tiếp với AI
+* AI có khả năng đọc source code đã nộp
+* Gợi ý hướng giải bài
+* Phát hiện lỗi và giải thích lỗi
+* Đưa ra cách cải thiện code
+
+👉 Lưu ý:  
+AI chỉ đóng vai trò **gợi ý (assistant)**, không thay thế quyết định của giáo viên.
+
+---
+
+### 3.6 Trang quản trị
+
+* Quản lý người dùng
+* Quản lý lớp học
+* Quản lý bài tập
+* Quản lý bài nộp
+* Theo dõi hệ thống
+
+---
+
+## 4. Kiến trúc hệ thống
+
+Backend được xây dựng theo mô hình **Layered Architecture**:
 Client → Controller → Service → Repository → Database
 
-Ngoài ra, hệ thống áp dụng các Design Pattern:
 
-Strategy Pattern: Cho chấm điểm (AI, giáo viên, commit)
-Factory Pattern: Tạo Git Service (GitHub, GitLab trong tương lai)
-Repository Pattern: Truy xuất dữ liệu
+---
 
-Kiến trúc này giúp:
+### Áp dụng Design Pattern
 
-Phân tách trách nhiệm rõ ràng
-Dễ kiểm thử
-Dễ mở rộng hệ thống
+* **Strategy Pattern**:
+  - Chấm điểm (AI, giáo viên, commit)
 
-5. Cấu trúc thư mục dự án (kèm chú thích chức năng)
+* **Factory Pattern**:
+  - Tạo AI Service
+  - Tạo Git Service (GitHub, GitLab trong tương lai)
 
-edu-group-assignment-system
+* **Repository Pattern**:
+  - Truy xuất dữ liệu
+
+---
+
+## 5. Cấu trúc thư mục dự án
+```plaintext
+edu_group_assignment_system
 │
-├── src/main/java/com/project
-│
-│   ├── controller
+├── controller
+│   ├── assignment
 │   │   AssignmentController.java
+│   │
+│   ├── submission
 │   │   SubmissionController.java
-│   │   UserController.java
 │   │
-│   │   # Chức năng:
-│   │   - Nhận request từ client
-│   │   - Gọi Service xử lý
-│   │   - Trả response
+│   └── user
+│       UserController.java
 │
-│   ├── service
+├── service
+│   ├── assignment
+│   │   AssignmentService.java
+│   │   AssignmentServiceImpl.java
 │   │
-│   │   ├── interfaces
-│   │   │   AssignmentService.java
-│   │   │   SubmissionService.java
-│   │   │   GithubService.java
+│   ├── submission
+│   │   SubmissionService.java
+│   │   SubmissionServiceImpl.java
 │   │
-│   │   ├── impl
-│   │   │   AssignmentServiceImpl.java
-│   │   │   SubmissionServiceImpl.java
-│   │   │   GithubServiceImpl.java
+│   ├── ai
+│   │   AIService.java
+│   │   impl/
+│   │       GeminiService.java
+│   │       OpenAIService.java
 │   │
-│   │   ├── strategy
-│   │   │   GradingStrategy.java
-│   │   │   AIGradingStrategy.java
-│   │   │   TeacherGradingStrategy.java
-│   │   │   CommitBasedGradingStrategy.java
-│   │
-│   │   ├── factory
-│   │   │   GitServiceFactory.java
-│   │
-│   │   # Chức năng:
-│   │   - Xử lý business logic
-│   │   - Điều phối chấm điểm
-│   │   - Tích hợp GitHub & AI
+│   ├── github
+│   │   GithubService.java
+│   │   GithubServiceImpl.java
 │
-│   ├── repository
-│   │   UserRepository.java
-│   │   AssignmentRepository.java
-│   │   SubmissionRepository.java
-│   │
-│   │   # Chức năng:
-│   │   - CRUD database
-│   │   - Không chứa business logic
+│   ├── strategy
+│   │   GradingStrategy.java
+│   │   impl/
+│   │       AIGradingStrategy.java
+│   │       TeacherGradingStrategy.java
+│   │       CommitGradingStrategy.java
 │
-│   ├── entity
-│   │   User.java
-│   │   Classroom.java
-│   │   Group.java
-│   │   Assignment.java
-│   │   Submission.java
-│   │
-│   │   # Chức năng:
-│   │   - Mapping bảng MySQL
+│   ├── factory
+│   │   GradingStrategyFactory.java
+│   │   AIServiceFactory.java
 │
-│   ├── dto
-│   │   AssignmentDTO.java
-│   │   SubmissionDTO.java
-│   │
-│   │   # Chức năng:
-│   │   - Truyền dữ liệu giữa các tầng
+├── repository
+│   AssignmentRepository.java
+│   SubmissionRepository.java
+│   UserRepository.java
 │
-│   ├── config
-│   │   SecurityConfig.java
-│   │   GithubConfig.java
-│   │
-│   │   # Chức năng:
-│   │   - Cấu hình hệ thống
+├── entity
+│   User.java
+│   Classroom.java
+│   Group.java
+│   Assignment.java
+│   Submission.java
 │
-│   └── Application.java
+├── dto
+│   assignment/
+│   submission/
+│   user/
 │
-│       # Chức năng:
-│       - Khởi chạy Spring Boot
+├── config
+│   SecurityConfig.java
+│   GithubConfig.java
 │
-├── docker-compose.yml
-│
-│   # Chức năng:
-│   # Chạy MySQL bằng Docker
-│
-├── src/main/resources
-│   application.yml
-│
-└── README.md
+└── EduApplication.java
+```
 
-6. Hướng dẫn chạy dự án
-Bước 1: Clone repository
+## 6. Hướng dẫn chạy dự án
+
+### Bước 1: Clone repository
 git clone <repository-url>
-cd edu-group-assignment-system
-Bước 2: Chạy MySQL bằng Docker
+cd project
+
+
+---
+
+### Bước 2: Chạy MySQL bằng Docker
 docker-compose up -d
 
-(Sử dụng Docker)
 
-Bước 3: Cấu hình application.yml
+---
 
-Điền thông tin:
+### Bước 3: Cấu hình application.yml
 
-MySQL
-GitHub Token
-Gemini API Key
-Bước 4: Chạy backend
+Cấu hình các thông tin:
+
+* Database (MySQL)
+* GitHub Personal Access Token
+* AI API Key (Gemini / OpenAI)
+
+---
+
+### Bước 4: Chạy backend
 ./mvnw spring-boot:run
-7. Chuẩn API Response
+
+
+---
+
+## 7. Chuẩn API Response
 {
-  "success": true,
-  "data": {},
-  "message": "Success"
+"success": true,
+"data": {},
+"message": "Success"
 }
-8. Quy tắc làm việc nhóm
-Không push trực tiếp vào main.
-Mỗi thành viên làm việc trên một branch riêng.
-Tạo Pull Request trước khi merge.
+
+
+---
+
+## 8. Quy tắc làm việc nhóm
+
+* Không push trực tiếp vào main
+* Mỗi thành viên làm việc trên một branch riêng
+* Tạo Pull Request trước khi merge
 
 Ví dụ:
-
 feat/assignment
 feat/submission
 feat/github-integration
-feat/ai-grading
-9. Công nghệ sử dụng
+feat/ai-service
+
+
+---
+
+## 9. Công nghệ sử dụng
 
 Backend:
 
-Java Spring Boot
-Spring Data JPA
-MySQL
+* Java Spring Boot
+* Spring Data JPA
+* MySQL
 
 Tích hợp:
 
-GitHub API
-AI Agent
+* GitHub API
+* AI APIs (Gemini, OpenAI, ...)
 
 Công cụ:
 
-Docker
-Git
-GitHub
-10. Mục đích dự án
+* Docker
+* Git
+* GitHub
 
-Dự án được thực hiện nhằm mục đích:
+---
 
-Học tập và áp dụng kiến trúc phần mềm hiện đại
-Thực hành tích hợp API bên ngoài (Git, AI)
-Áp dụng Design Pattern trong thực tế
-Xây dựng hệ thống có khả năng mở rộng và bảo trì cao
+## 10. Mục đích dự án
+
+* Học tập và áp dụng kiến trúc phần mềm hiện đại
+* Thực hành tích hợp API (Git, AI)
+* Áp dụng Design Pattern trong thực tế
+* Xây dựng hệ thống có khả năng mở rộng và bảo trì cao
